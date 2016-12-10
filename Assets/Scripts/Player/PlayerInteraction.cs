@@ -45,6 +45,7 @@ public class PlayerInteraction : MonoBehaviour {
 				// Kick off the dialogue at this node.
 				FindObjectOfType<DialogueRunner> ().StartDialogue (target.talkToNode);
 				CameraSmoothFollow.Instance.ZoomToTarget(target.transform);
+				GetComponent<LoveManager>().SetTalkingTo(target.GetComponent<LoveTarget>());
 			}
 		}
 	
