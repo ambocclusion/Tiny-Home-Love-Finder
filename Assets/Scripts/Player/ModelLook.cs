@@ -17,8 +17,10 @@ public class ModelLook : MainBehaviour {
 	
 	protected override void FixedGameUpdate() {
 
-		if (_dialogue.isDialogueRunning)
+		if (_dialogue.isDialogueRunning){
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(LoveManager.Instance.currentTalkingTo.transform.position - transform.position), 2.5f * Time.deltaTime);
 			return;
+		}
 		
 		if(MyMovement.PlayerInput != Vector2.zero)
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(MyMovement.PlayerInput.x, 0, MyMovement.PlayerInput.y)), 5f * Time.deltaTime);

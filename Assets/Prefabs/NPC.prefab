@@ -24,6 +24,11 @@ GameObject:
   - component: {fileID: 23061469323902372}
   - component: {fileID: 114846972597950782}
   - component: {fileID: 114106160207946698}
+  - component: {fileID: 114155518006219852}
+  - component: {fileID: 114941932990240930}
+  - component: {fileID: 114554988903876462}
+  - component: {fileID: 114374068777624846}
+  - component: {fileID: 114594876407435138}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -38,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221621672627738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.01, y: 0, z: 4.54}
+  m_LocalPosition: {x: 6.393, y: 0, z: 4.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,6 +114,86 @@ MonoBehaviour:
     PlayerRating: 0
     Hates: []
     Loves: []
+--- !u!114 &114155518006219852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221621672627738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21d7236338b64bedb0f7ea21ef034a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdleTime: 10
+  IsIdling: 0
+--- !u!114 &114374068777624846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221621672627738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdaa54b947d9546e3bc45d706993c55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drawGizmos: 0
+  _center: {x: 0, y: 0, z: 0}
+  _radius: 1
+  _minSpeedForTurning: 0.01
+  _movementPriority: 0
+  _turnTime: 0.25
+  _mass: 0.1
+  _allowedMovementAxes: {x: 1, y: 0, z: 1}
+  _arrivalRadius: 0.25
+  _maxSpeed: 1.5
+  _maxForce: 10
+  _canMove: 1
+  _queueName: Steering
+  _tickLength: 0.1
+  _maxQueueProcessedPerUpdate: 20
+  _traceAdjustments: 0
+  _accelerationRate: 5
+  _decelerationRate: 8
+--- !u!114 &114554988903876462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221621672627738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70183e0256ad48b292db3bb58f5eaf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 2
+  _avoidanceForceFactor: 0.75
+  _minTimeToCollision: 2
+  _offMeshCheckingEnabled: 1
+  _probePositionOffset: {x: 0, y: 0.2, z: 0}
+  _probeRadius: 5
+--- !u!114 &114594876407435138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221621672627738}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee13663c71464ae7bf78c54e586e020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _queueName: Radar
+  _maxQueueProcessedPerUpdate: 20
+  _tickLength: 0.5
+  _detectionRadius: 5
+  _detectDisabledVehicles: 0
+  _layersChecked:
+    serializedVersion: 2
+    m_Bits: 1
+  _drawGizmos: 0
+  _preAllocateSize: 30
 --- !u!114 &114846972597950782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,3 +208,18 @@ MonoBehaviour:
   characterName: Oh Yeah
   talkToNode: test.start
   scriptToLoad: {fileID: 0}
+--- !u!114 &114941932990240930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221621672627738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50d9a19ad91a4e51ae1bebb0dcc1e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
+  _maxLatitudeSide: 2
+  _maxLatitudeUp: 2
+  _smoothRate: 0.05
