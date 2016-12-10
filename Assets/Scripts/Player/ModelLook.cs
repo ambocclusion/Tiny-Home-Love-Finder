@@ -5,16 +5,7 @@ using UnityEngine;
 public class ModelLook : MainBehaviour {
 
 	public PlayerMovement MyMovement;
-
-	public Vector3 LookAt = new Vector3();
-
-	void Start(){
-
-		LookAt = transform.position;
-
-	}
-
-	// Update is called once per frame
+	
 	protected override void FixedGameUpdate() {
 		
 		if(MyMovement.PlayerInput != Vector2.zero)
