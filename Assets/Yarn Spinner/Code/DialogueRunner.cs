@@ -185,6 +185,7 @@ namespace Yarn.Unity
 			// to allow time for any animations that might run while transitioning
 			// out of a conversation (ie letterboxing going away, etc)
 			isDialogueRunning = false;
+			CameraSmoothFollow.Instance.ResetTargetToPlayer();
 		}
 
 		public void Clear() {
@@ -198,6 +199,7 @@ namespace Yarn.Unity
 
 		public void Stop() {
 			dialogue.Stop();
+			CameraSmoothFollow.Instance.ResetTargetToPlayer();
 		}
 
 		public bool NodeExists(string nodeName) {

@@ -10,9 +10,17 @@ public class PlayerInteraction : MonoBehaviour {
 
 		public float movementFromButtons {get;set;}
 
+		private DialogueRunner _dialogue;
+
+		void Start() {
+
+			_dialogue = FindObjectOfType<DialogueRunner>();
+
+		}
+
 		void Update(){
 
-			if (FindObjectOfType<DialogueRunner>().isDialogueRunning == true) {
+			if (_dialogue.isDialogueRunning == true) {
 				return;
 			}
 
@@ -36,6 +44,7 @@ public class PlayerInteraction : MonoBehaviour {
 			if (target != null) {
 				// Kick off the dialogue at this node.
 				FindObjectOfType<DialogueRunner> ().StartDialogue (target.talkToNode);
+				CameraSmoothFollow.Instance.ZoomToTarget(target.transform);
 			}
 		}
 	

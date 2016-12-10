@@ -1,6 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Yarn.Unity;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MainBehaviour {
@@ -9,15 +10,25 @@ public class PlayerMovement : MainBehaviour {
 	public float SprintSpeed = 10f;
 	public Vector2 PlayerInput = new Vector2();
 
+	private DialogueRunner _dialogue;
 	private Rigidbody _rigid;
 
-	void Awake(){
+	void Awake() {
 
 		_rigid = GetComponent<Rigidbody>();
 
 	}
+
+	void Start() {
+
+		_dialogue = FindObjectOfType<DialogueRunner>();
+
+	}
  
 	protected override void FixedGameUpdate() {
+
+		if (_dialogue.isDialogueRunning)
+			return;
 
 		PlayerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
