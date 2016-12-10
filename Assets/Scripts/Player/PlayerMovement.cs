@@ -34,7 +34,7 @@ public class PlayerMovement : MainBehaviour {
 
 		float currentSpeed = Input.GetAxis("Sprint") == 0 ? PlayerSpeed : SprintSpeed;
 
-		_rigid.velocity = new Vector3(PlayerInput.x * (currentSpeed), 0, PlayerInput.y * (currentSpeed));
+		_rigid.velocity = new Vector3(PlayerInput.x * (currentSpeed), _rigid.velocity.y, PlayerInput.y * (currentSpeed));
 
 	}
 	
