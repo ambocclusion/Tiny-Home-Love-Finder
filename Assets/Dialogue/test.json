@@ -2,7 +2,7 @@
 	{
 		"title": "test.start",
 		"tags": "",
-		"body": "This is dialogue\nThis is even MORE dialogue.\nWow so much dialogue is jam packed in here!\n[[Testing|testo]]",
+		"body": "This is dialogue\n[[Testing|testo]]",
 		"position": {
 			"x": 580,
 			"y": 127
@@ -12,7 +12,7 @@
 	{
 		"title": "testo",
 		"tags": "",
-		"body": "Empty Text",
+		"body": "Empty Text\n<<addlove CurrentTarget>>",
 		"position": {
 			"x": 667,
 			"y": 472

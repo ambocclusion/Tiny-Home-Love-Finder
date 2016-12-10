@@ -9,6 +9,10 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 	public LoveTarget currentTalkingTo;
 	public List<LoveTarget> AllLovers = new List<LoveTarget>();
 
+	public List<LoveTarget> MovedIn = new List<LoveTarget>();
+
+	public int LikabilityToMoveIn = 3;
+
 	private DialogueRunner _dialogue;
 
 	void Start(){
@@ -18,7 +22,7 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 
 	}
 
-	void Update(){
+	protected override void GameUpdate(){ 
 
 		if(!_dialogue.isDialogueRunning)
 			currentTalkingTo = null;
@@ -28,6 +32,15 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 	public void SetTalkingTo(LoveTarget target){
 
 		currentTalkingTo = target;
+
+	}
+
+	public void MoveIn(LoveTarget target){
+
+		if(!MovedIn.Contains(target)){
+			MovedIn.Add(target);
+			target.gameObject.SetActive(false);
+		}
 
 	}
 
