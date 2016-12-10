@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Me:
     PlayerRating: 0
+    Hates: []
+    Loves: []
 --- !u!114 &114846972597950782
 MonoBehaviour:
   m_ObjectHideFlags: 1

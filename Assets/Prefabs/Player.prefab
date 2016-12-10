@@ -250,6 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTalkingTo: {fileID: 0}
   AllLovers: []
+  MovedIn: []
+  LikabilityToMoveIn: 3
 --- !u!114 &114856018273230876
 MonoBehaviour:
   m_ObjectHideFlags: 1
