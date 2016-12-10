@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTalkingTo: {fileID: 0}
+  AllLovers: []
 --- !u!114 &114856018273230876
 MonoBehaviour:
   m_ObjectHideFlags: 1

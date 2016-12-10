@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
-public class TimeManager : MainBehaviour {
+public class TimeManager : SingletonMainBehaviour<TimeManager> {
 
 	public float CurrentDayTime = 0.0f;
 	public int CurrentDay = 0;
@@ -20,13 +21,27 @@ public class TimeManager : MainBehaviour {
 
 	public float RelativeStartTime = 12f;
 
-	void Start(){
+	public bool UseRealTime = false;
 
-		CurrentDayTime = (RelativeStartTime / 24f) * DayLength;
+	private DialogueRunner _dialogue;
+
+	void Start(){
+		Debug.Log((((System.DateTime.Now.Hour * 60) * 60) + (System.DateTime.Now.Minute * 60) + System.DateTime.Now.Second));
+
+		if(!UseRealTime)
+			CurrentDayTime = (RelativeStartTime / 24f) * DayLength;
+		else{
+			CurrentDayTime = (((System.DateTime.Now.Hour * 60) * 60) + (System.DateTime.Now.Minute * 60) + System.DateTime.Now.Second);
+			DayLength = (24 * 60) * 60;
+		}
+		_dialogue = FindObjectOfType<DialogueRunner>();
 
 	}
 
 	protected override void FixedGameUpdate(){
+
+		if(_dialogue.isDialogueRunning)
+			return;
 
 		CurrentDayTime += Time.fixedDeltaTime;
 
