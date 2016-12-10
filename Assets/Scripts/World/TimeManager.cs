@@ -26,7 +26,6 @@ public class TimeManager : SingletonMainBehaviour<TimeManager> {
 	private DialogueRunner _dialogue;
 
 	void Start(){
-		Debug.Log((((System.DateTime.Now.Hour * 60) * 60) + (System.DateTime.Now.Minute * 60) + System.DateTime.Now.Second));
 
 		if(!UseRealTime)
 			CurrentDayTime = (RelativeStartTime / 24f) * DayLength;
@@ -56,13 +55,17 @@ public class TimeManager : SingletonMainBehaviour<TimeManager> {
 			Sun.SetActive(false);
 			Moon.SetActive(true);
 		}
-		else if(CurrentTime > 6f && CurrentTime <= 18f){
+		else if(CurrentTime > 8f && CurrentTime <= 18f){
 			Sun.SetActive(true);
 			Moon.SetActive(false);
 		}
-		else if(CurrentTime > 18f){
+		else if(CurrentTime > 20f){
 			Sun.SetActive(false);
 			Moon.SetActive(true);
+		}
+		else{
+			Sun.SetActive(true);
+			Moon.SetActive(true);	
 		}
 
 
