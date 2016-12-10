@@ -1787,11 +1787,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentDayTime: 0
   CurrentDay: 0
-  DayLength: 24
+  DayLength: 60
   Light: {fileID: 1396298743}
   Sun: {fileID: 2107943690}
   Moon: {fileID: 1198069774}
-  RelativeStartTime: 18
+  RelativeStartTime: 12
 --- !u!4 &2041089602
 Transform:
   m_ObjectHideFlags: 0
