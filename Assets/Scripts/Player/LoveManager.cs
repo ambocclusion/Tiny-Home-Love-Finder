@@ -40,6 +40,7 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 		if(!MovedIn.Contains(target)){
 			MovedIn.Add(target);
 			target.gameObject.SetActive(false);
+			GetComponent<MoveInCutsceneStarter>().StartCutscene(target);
 		}
 
 	}

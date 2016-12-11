@@ -2,7 +2,7 @@
 	{
 		"title": "test.start",
 		"tags": "",
-		"body": "wow i cant wait to live inside of you!!!\n<<if $SallyLove == 2>>\n    Special dialogue!!\n<<endif>>\n[[Testing|testo]]",
+		"body": "wow i cant wait to live inside of you!!!\n$SallyLove\n<<if $SallyLove == 2>>\n    Special dialogue!!\n<<endif>>\n[[Testing|testo]]",
 		"position": {
 			"x": 659,
 			"y": 146
