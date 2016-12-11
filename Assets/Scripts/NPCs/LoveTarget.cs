@@ -7,6 +7,9 @@ public class LoveTarget : MonoBehaviour {
 
 	public Lover Me;
 
+	public ParticleSystem LoveParticle;
+	public ParticleSystem HateParticle;
+
 	private string _myName = "";
 
 	private ExampleVariableStorage _storage;
@@ -19,6 +22,7 @@ public class LoveTarget : MonoBehaviour {
 
 		_named = GetComponent<Yarn.Unity.Example.NPC>().characterName;
 		_storage.SetValue("$" + _named + "Love", new Yarn.Value((float)Me.PlayerRating));
+		_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
 
 	}
 
@@ -27,6 +31,7 @@ public class LoveTarget : MonoBehaviour {
 
 		Me.PlayerRating++;
 		_storage.SetValue("$" + _named + "Love", new Yarn.Value((float)Me.PlayerRating));
+		LoveParticle.Play();
 
 		if(Me.PlayerRating >= LoveManager.Instance.LikabilityToMoveIn){
 			LoveManager.Instance.MoveIn(this);
@@ -39,13 +44,17 @@ public class LoveTarget : MonoBehaviour {
 
 		Me.PlayerRating--;
 		_storage.SetValue("$" + _named + "Love", new Yarn.Value((float)Me.PlayerRating));
+		HateParticle.Play();
 
 	}
 
 	void Update(){
 
-		if(LoveManager.Instance.currentTalkingTo == this)
+		if(LoveManager.Instance.currentTalkingTo == this){
 			this.gameObject.name = "CurrentTarget";
+			Me.LastTalkedToDay = TimeManager.Instance.CurrentDay;
+			_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
+		}
 		else
 			this.gameObject.name = _myName;
 
