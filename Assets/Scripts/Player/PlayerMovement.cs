@@ -7,8 +7,9 @@ using Yarn.Unity;
 public class PlayerMovement : MainBehaviour {
 
 	public float PlayerSpeed = 5f;
-	public float SprintSpeed = 10f;
 	public Vector2 PlayerInput = new Vector2();
+
+	public Animator anim;
 
 	private DialogueRunner _dialogue;
 	private Rigidbody _rigid;
@@ -27,14 +28,19 @@ public class PlayerMovement : MainBehaviour {
  
 	protected override void FixedGameUpdate() {
 
-		if (_dialogue.isDialogueRunning)
+		if (_dialogue.isDialogueRunning){
+			anim.SetBool("walking", false);
 			return;
+		}
 
 		PlayerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-		float currentSpeed = Input.GetAxis("Sprint") == 0 ? PlayerSpeed : SprintSpeed;
+		_rigid.velocity = new Vector3(PlayerInput.x * (PlayerSpeed), _rigid.velocity.y, PlayerInput.y * (PlayerSpeed));
 
-		_rigid.velocity = new Vector3(PlayerInput.x * (currentSpeed), _rigid.velocity.y, PlayerInput.y * (currentSpeed));
+		if(PlayerInput == Vector2.zero)
+			anim.SetBool("walking", false);
+		else if(PlayerInput != Vector2.zero)
+			anim.SetBool("walking", true);
 
 	}
 	
