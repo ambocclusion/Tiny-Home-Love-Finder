@@ -12,6 +12,8 @@ public class MoveInAnimManager : MonoBehaviour {
 	public ParticleSystem ExplodeParticle;
 	public ParticleSystem SecondExplodeParticle;
 
+	public AudioClip moan;
+
 	private bool _played = false;
 
 	public void Init(LoveTarget target){
@@ -28,6 +30,7 @@ public class MoveInAnimManager : MonoBehaviour {
 			if(!_played){
 				ExplodeParticle.Play();
 				SecondExplodeParticle.Play();
+				PlayMoan();
 				Invoke("DisableCam", 1.5f);
 				Invoke("BringBackGame", 2f);
 				Invoke("DestroyMe", 10f);
@@ -52,6 +55,12 @@ public class MoveInAnimManager : MonoBehaviour {
 	private void DestroyMe(){
 
 		Destroy(this.gameObject);
+
+	}
+
+	private void PlayMoan(){
+
+		AudioSource.PlayClipAtPoint(moan, transform.position);
 
 	}
 }
