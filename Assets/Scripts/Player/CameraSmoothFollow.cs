@@ -9,22 +9,23 @@ public class CameraSmoothFollow : SingletonMainBehaviour<CameraSmoothFollow> {
 	public float FollowSpeed = 5.0f;
 	public Vector3 offset = Vector3.zero;
 	public Vector3 ZoomOffset = Vector3.zero;
-	public float ZoomAngle = 45f;
+	//public float ZoomAngle = 45f;
+	public Vector3 ZoomRot = new Vector3();
 
 	private Vector3 _currentOffset;
-	private float _currentAngle;
+	private Vector3 _currentAngle;
 
 	void Start(){
 
 		_currentOffset = offset;
-		_currentAngle = 0.0f;
+		_currentAngle = Vector3.zero;
 
 	}
 
 	protected override void FixedGameUpdate(){
 
 		transform.position = Vector3.Lerp(transform.position, FollowTarget.position + transform.TransformVector(_currentOffset), FollowSpeed);
-		transform.eulerAngles = new Vector3(transform.eulerAngles.x, Mathf.LerpAngle(transform.eulerAngles.y, _currentAngle, .1f), transform.eulerAngles.z);
+		transform.eulerAngles = new Vector3(_currentAngle.x, Mathf.LerpAngle(transform.eulerAngles.y, _currentAngle.y, .1f), transform.eulerAngles.z);
 
 	}
 
@@ -32,7 +33,7 @@ public class CameraSmoothFollow : SingletonMainBehaviour<CameraSmoothFollow> {
 
 		SetTarget(target);
 		_currentOffset = ZoomOffset;
-		_currentAngle = ZoomAngle;
+		_currentAngle = ZoomRot;
 
 	}
 
@@ -46,7 +47,7 @@ public class CameraSmoothFollow : SingletonMainBehaviour<CameraSmoothFollow> {
 
 		SetTarget(PlayerTarget);
 		_currentOffset = offset;
-		_currentAngle = 0.0f;
+		_currentAngle = Vector3.zero;
 
 	}
 
