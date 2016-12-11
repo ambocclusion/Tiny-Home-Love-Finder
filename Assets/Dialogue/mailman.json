@@ -1,0 +1,162 @@
+[
+	{
+		"title": "mailman.start",
+		"tags": "",
+		"body": "<<if $spoken_to_jock == 0>>\n    JACQUES: BRO, check out my sweet POWER MOVE\n    JACQUES: oh you're new here?! i'm the ALPHA BOY\n    JACQUES: i'm fresh out of COMMUNITY COLLEGE and ready to PUMP SOME IRON\n    <<set $spoken_to_jock to 1>>\n<<endif>>\n<<if $jock_talked_to_today is 1>>\n    JACQUES: busy working out, CHECK ME OUT TOMORROW when i lift my GAME DESIGN DEGREE\n    <<stop>>\n<<else>>\n    <<if $jock_day is 0>>\n        JACQUES: BRO, got something for me to lift?\n        [[lift me!|jock.liftme]][[plenty of air around|jock.air]]\n    <<elseif $jock_day is 1>>\n        JACQUES: come back to touch my muscles?\n        JACQUES: i would too\n        JACQUES: i really liked our REAL TALK yesterday\n        JACQUES: i think you can hang\n        [[high five!|jock.hanghigh]][[let's fist bump|jock.hangfist]]\n    <<elseif $jock_day is 2>>\n        <<if $jock_started_quest is 0>>\n            JACQUES: hey BRO did you bring any controllers?\n            JACQUES: i'd let you play my SUPER CRIMBENDO but MUSICIAN has my SWERVEBIRD controller\n            JACQUES: yo BRO would you go get my controller for me?\n            [[sure|jock.startquest]][[maybe not...|jock.noquest]]\n        <<else>>\n            <<if $jock_ended_quest is 0>>\n                JACQUES: did you get my controller back from MUSICIAN??\n                JACQUES: WHAT? you didn't?\n                JACQUES: BRO come back to me when you got my controller\n                JACQUES: REMEMBER... MUSICIAN has my CONTROLLER\n                <<stop>>\n            <<elseif $jock_ended_quest is 1>>\n                JACQUES: BRO you got my controller????\n                JACQUES: this is great!\n                JACQUES: hey BRO can i come inside and play SUPER CRIMBENDO?\n                JACQUES: i'll get cozy inside of you and LIFT WEIGHTS!\n                <<addlove CurrentTarget>>\n            <<endif>>\n        <<endif>>\n    <<endif>>\n<<endif>>\n\n",
+		"position": {
+			"x": 277,
+			"y": 708
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.liftme",
+		"tags": "dayone",
+		"body": "JACQUES: wow you'd really let me do that???\nJACQUES: you don't want me to lift you\nJACQUES: you'd go too high and get SCARED\nJACQUES: just so you know i can lift like 100 of you\nJACQUES: you barely weigh as much as my diploma\n[[i don't believe|jock.dontbelieve]][[you're so COOL|jock.socool]]",
+		"position": {
+			"x": 883,
+			"y": -3
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.dontbelieve",
+		"tags": "dayone",
+		"body": "JACQUES: yeah? well you should check out my TROPHIES one day\nJACQUES: TROPHIES for all the weights i lifted in game design class\nJACQUES: i could easily lift the entire PROGRAMMING TEAM\nJACQUES: i'll see you tomorrow, BRO\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1223,
+			"y": -2
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.socool",
+		"tags": "dayone",
+		"body": "JACQUES: thanks BRO, i don't work out every day to be a DWEEB\nJACQUES: prove to me you're not a dweeb. how much can you bench???\n[[50 pounds|jock.wrongweight]][[419 pounds|jock.wrongweight]][[1000 pounds|jock.rightweight]]",
+		"position": {
+			"x": 1222,
+			"y": 239
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.wrongweight",
+		"tags": "dayone",
+		"body": "JACQUES: wow, sounds like you need to hit the GYM sometime\nJACQUES: maybe we can be GYM BUDDIES\nJACQUES: SYKE come see me when you can bench at least 1000 pounds!!\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1487,
+			"y": 192
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.rightweight",
+		"tags": "dayone",
+		"body": "JACQUES: wow 1000 huh?\nJACQUES: you're pretty close to me, except i can bench A MILLION\nJACQUES: that's okay you're off to a good start\nJACQUES: i really enjoyed talking to you today\nJACQUES: come back tomorrow and we can COMPARE MUSCLES\n<<addlove CurrentTarget>>\n<<set $jock_day to 1>>\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1486,
+			"y": 429
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.air",
+		"tags": "dayone",
+		"body": "JACQUES: AIR?!?!\nJACQUES: BRO i can lift at least a billion more pounds of air than you\nJACQUES: come back tomorrow and i'll lift the world's largest JAR OF AIR\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 884,
+			"y": 260
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.hanghigh",
+		"tags": "daytwo",
+		"body": "JACQUES: what? a high five?\nJACQUES: BRO how lame can you GET?\nJACQUES: wow this really bums me out\nJACQUES: just come and talk to me tomorrow, i need to lift something to get all this LAME out of my system\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 887,
+			"y": 525
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.hangfist",
+		"tags": "daytwo",
+		"body": "JACQUES: AW YEAH BRO YOU GOT IT\nJACQUES: that was SICK\nJACQUES: BRO, that got me so pumped it's time for a POP QUIZ\nJACQUES: READY? this won't be EASY\nJACQUES: how many pounds can i lift?\n[[2000, next!|jock.quizwrong]][[that's easy, a BILLION|jock.quizparttwo]][[no brainer, 149,291|jock.quizwrong]]",
+		"position": {
+			"x": 878,
+			"y": 768
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.quizwrong",
+		"tags": "daytwo",
+		"body": "JACQUES: WRONG\nJACQUES: sounds like you need to work on your MENTAL muscles as much as your MUSCLE muscles\nJACQUES: see me tomorrow when you've curled a few BOOKS\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1182,
+			"y": 1032
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.quizparttwo",
+		"tags": "daytwo",
+		"body": "JACQUES: ROUND TWO\nJACQUES: how big are my muscles?\n[[10 inches?|jock.wrongquiz]][[28 inches?|jock.quizpartthree]][[a billion?|jock.wrongquiz2]]",
+		"position": {
+			"x": 1179,
+			"y": 772
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.wrongquiz2",
+		"tags": "daytwo",
+		"body": "JACQUES: HAH\nJACQUES: i WISH!\nJACQUES: try again TOMORROW\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1435,
+			"y": 1033
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.quizpartthree",
+		"tags": "daytwo",
+		"body": "JACQUES: WOW you're really IMPRESSING ME\nJACQUES: are you ready for your LAST ONE?\nJACQUES: what school is my GAME DESIGN DEGREE from?\n[[swoleland college|jock.quizwrong]][[west protein university|jock.quizwrong]][[fullgains university |jock.finishquiz]]",
+		"position": {
+			"x": 1445,
+			"y": 770
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.finishquiz",
+		"tags": "",
+		"body": "JACQUES: that's right! the one and only FULLGAINS UNIVERSITY\nJACQUES: that's where the best and brightest learn to PLAY GAMES for a living\nJACQUES: i have a bachelor's in SPEED RUNNING\nJACQUES: stop by tomorrow and i'll show you my SICK STRATS\nJACQUES: i can't wait to see you again!\n<<addlove CurrentTarget>>\n<<set $jock_day to 2>>\n<<set $jock_talked_to_today to 1>>",
+		"position": {
+			"x": 1731,
+			"y": 770
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.startquest",
+		"tags": "daythree",
+		"body": "JACQUES: really BRO?\nJACQUES: i think we're on a fast track to be BEST FRIENDS\nJACQUES: heck, maybe i'll even move in to you!\nJACQUES: REMEMBER... MUSICIAN has my CONTROLLER\n<<set $jock_started_quest to 1>>\n<<set $jock_ended_quest to 1>>",
+		"position": {
+			"x": 872,
+			"y": 1275
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.noquest",
+		"tags": "",
+		"body": "JACQUES: let me know when you want to do a BRO a favor",
+		"position": {
+			"x": 878,
+			"y": 1522
+		},
+		"colorID": 0
+	}
+]

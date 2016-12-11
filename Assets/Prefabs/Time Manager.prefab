@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentDayTime: 0
   CurrentDay: 0
-  DayLength: 60
+  DayLength: 30
   Light: {fileID: 0}
   Sun: {fileID: 0}
   Moon: {fileID: 0}

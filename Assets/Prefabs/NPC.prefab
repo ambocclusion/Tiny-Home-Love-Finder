@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3419b57eb638f44db88701b5b33b8af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Sally
+  characterName: mailman
   talkToNode: test.start
   scriptToLoad: {fileID: 0}
 --- !u!114 &114941932990240930
