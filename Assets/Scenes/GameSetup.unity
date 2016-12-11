@@ -577,12 +577,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1221621672627738, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
       propertyPath: m_Name
-      value: NPC
+      value: Jock
       objectReference: {fileID: 0}
     - target: {fileID: 114846972597950782, guid: 117d9b8244fb4441488eb0b60d52765a,
         type: 2}
       propertyPath: characterName
-      value: Jimbo
+      value: jock
       objectReference: {fileID: 0}
     - target: {fileID: 1221621672627738, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
       propertyPath: m_IsActive
@@ -594,6 +594,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: f654e066262b5444bb5dbc7ac8ac295f,
         type: 3}
+    - target: {fileID: 114846972597950782, guid: 117d9b8244fb4441488eb0b60d52765a,
+        type: 2}
+      propertyPath: talkToNode
+      value: jock.start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
   m_IsPrefabParent: 0
@@ -678,6 +683,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114719970087280762, guid: 367f5c10407ec42589020bb288f520e8,
+        type: 2}
+      propertyPath: sourceText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4999270816623692, guid: 367f5c10407ec42589020bb288f520e8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.37
@@ -745,6 +755,11 @@ Prefab:
       propertyPath: debugTextView
       value: 
       objectReference: {fileID: 1253915310}
+    - target: {fileID: 114719970087280762, guid: 367f5c10407ec42589020bb288f520e8,
+        type: 2}
+      propertyPath: sourceText.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: 2f908cf9d6bf441c5a30bc1edfd27921, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 367f5c10407ec42589020bb288f520e8, type: 2}
   m_IsPrefabParent: 0
@@ -867,6 +882,15 @@ Prefab:
     - target: {fileID: 4662806441647656, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221621672627738, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
+      propertyPath: m_Name
+      value: Mailman
+      objectReference: {fileID: 0}
+    - target: {fileID: 114846972597950782, guid: 117d9b8244fb4441488eb0b60d52765a,
+        type: 2}
+      propertyPath: characterName
+      value: mailman
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
@@ -2119,7 +2143,7 @@ Prefab:
     - target: {fileID: 114059992864600660, guid: 5a0197e44f7eb494cb91a5a91508e4c8,
         type: 2}
       propertyPath: DayLength
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0197e44f7eb494cb91a5a91508e4c8, type: 2}

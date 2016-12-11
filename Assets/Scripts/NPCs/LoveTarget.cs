@@ -22,7 +22,20 @@ public class LoveTarget : MonoBehaviour {
 
 		_named = GetComponent<Yarn.Unity.Example.NPC>().characterName;
 		_storage.SetValue("$" + _named + "Love", new Yarn.Value((float)Me.PlayerRating));
-		_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
+		//_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
+
+	}
+
+	void LateUpdate(){
+
+		if(Me.LastTalkedToDay != TimeManager.Instance.CurrentDay)
+			_storage.SetValue("$" + _named + "_talked_to_today", new Yarn.Value(0.0f));
+
+	}
+
+	public void DoneTalkingTo(){
+
+		Me.LastTalkedToDay = TimeManager.Instance.CurrentDay;
 
 	}
 
@@ -53,7 +66,7 @@ public class LoveTarget : MonoBehaviour {
 		if(LoveManager.Instance.currentTalkingTo == this){
 			this.gameObject.name = "CurrentTarget";
 			Me.LastTalkedToDay = TimeManager.Instance.CurrentDay;
-			_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
+			//_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
 		}
 		else
 			this.gameObject.name = _myName;

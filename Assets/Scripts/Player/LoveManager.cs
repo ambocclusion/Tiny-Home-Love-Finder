@@ -24,8 +24,11 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 
 	protected override void GameUpdate(){ 
 
-		if(!_dialogue.isDialogueRunning)
+		if(!_dialogue.isDialogueRunning){
+			if(currentTalkingTo != null)
+				currentTalkingTo.Me.LastTalkedToDay = TimeManager.Instance.CurrentDay;
 			currentTalkingTo = null;
+		}
 
 	}
 
