@@ -6,6 +6,7 @@ using UnityEngine;
 public class Lover {
 
 	public int PlayerRating = 0;
+	public int LastTalkedToDay = -1;
 
 	[HideInInspector] public List<Lover> Hates = new List<Lover>();
 	[HideInInspector] public List<Lover> Loves = new List<Lover>();

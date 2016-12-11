@@ -24,8 +24,11 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 
 	protected override void GameUpdate(){ 
 
-		if(!_dialogue.isDialogueRunning)
+		if(!_dialogue.isDialogueRunning){
+			if(currentTalkingTo != null)
+				currentTalkingTo.Me.LastTalkedToDay = TimeManager.Instance.CurrentDay;
 			currentTalkingTo = null;
+		}
 
 	}
 
@@ -40,6 +43,7 @@ public class LoveManager : SingletonMainBehaviour<LoveManager> {
 		if(!MovedIn.Contains(target)){
 			MovedIn.Add(target);
 			target.gameObject.SetActive(false);
+			GetComponent<MoveInCutsceneStarter>().StartCutscene(target);
 		}
 
 	}

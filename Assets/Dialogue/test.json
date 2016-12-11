@@ -2,10 +2,10 @@
 	{
 		"title": "test.start",
 		"tags": "",
-		"body": "This is dialogue\n[[Testing|testo]]",
+		"body": "wow i cant wait to live inside of you!!!\n$SallyLove\n<<if $SallyLove == 2>>\n    Special dialogue!!\n<<endif>>\n[[Testing|testo]]",
 		"position": {
-			"x": 580,
-			"y": 127
+			"x": 659,
+			"y": 146
 		},
 		"colorID": 0
 	},
