@@ -14,9 +14,12 @@ public class PlayerMovement : MainBehaviour {
 	private DialogueRunner _dialogue;
 	private Rigidbody _rigid;
 
+	private Vector3 _defaultPos;
+
 	void Awake() {
 
 		_rigid = GetComponent<Rigidbody>();
+		_defaultPos = transform.position;
 
 	}
 
@@ -41,6 +44,9 @@ public class PlayerMovement : MainBehaviour {
 			anim.SetBool("walking", false);
 		else if(PlayerInput != Vector2.zero)
 			anim.SetBool("walking", true);
+
+		if(transform.position.y < -10f)
+			transform.position = _defaultPos + (Vector3.up * 30f);
 
 	}
 	

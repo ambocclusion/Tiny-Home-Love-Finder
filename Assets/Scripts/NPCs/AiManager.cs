@@ -12,11 +12,13 @@ public class AiManager : MainBehaviour {
 
 	private float _endIdleTime = 0.0f;
 	private DialogueRunner _dialogue;
+	private Vector3 _defaultPos;
 
 	void Start(){
 
 		_dialogue = FindObjectOfType<DialogueRunner>();
 		SetNextIdleTime();
+		_defaultPos = transform.position;
 
 	}
 
@@ -38,6 +40,9 @@ public class AiManager : MainBehaviour {
 		}
 
 		GetComponent<AutonomousVehicle>().CanMove = !IsIdling;
+
+		if(transform.position.y < -10f)
+			transform.position = _defaultPos + (Vector3.up * 30f);
 
 	}
 
