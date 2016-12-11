@@ -46,7 +46,7 @@ public class PlayerMovement : MainBehaviour {
 			anim.SetBool("walking", true);
 
 		if(transform.position.y < -10f)
-			transform.position = _defaultPos + (Vector3.up * 30f);
+			transform.position = _defaultPos + (Vector3.up * 15f);
 
 	}
 	

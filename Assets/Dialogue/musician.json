@@ -2,10 +2,10 @@
 	{
 		"title": "musician.start",
 		"tags": "",
-		"body": "<<if $spoken_to_mailman == 0>>\n    MAILMAN : first talk\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $musician_talked_to_today is 1>>\n    MUSICIAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $musician_day is 0>>\n        MUSICIAN: day one\n        [[end day|musician.dayone]]\n    <<elseif $musician_day is 1>>\n        MUSICIAN: day two\n        [[end day|musician.daytwo]]\n    <<elseif $musician_day is 2>>\n        MUSICIAN: day three\n        [[end day|musician.daythree]]\n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    MUSICIAN: first talk\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $musician_talked_to_today is 1>>\n    MUSICIAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $musician_day is 0>>\n        MUSICIAN: day one\n        [[end day|musician.dayone]]\n    <<elseif $musician_day is 1>>\n        MUSICIAN: day two\n        [[end day|musician.daytwo]]\n    <<elseif $musician_day is 2>>\n        MUSICIAN: day three\n        [[end day|musician.daythree]]\n    <<endif>>\n<<endif>>\n\n",
 		"position": {
 			"x": 272,
-			"y": 675
+			"y": 676
 		},
 		"colorID": 0
 	},

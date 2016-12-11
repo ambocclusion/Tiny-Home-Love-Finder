@@ -20,6 +20,7 @@ public class MoveInAnimManager : MonoBehaviour {
 
 		CitizenSprite.GetComponent<SpriteRenderer>().sprite = target.transform.FindChild("Char Sprite").GetComponent<SpriteRenderer>().sprite;
 		StateManager.Instance.SetState(GameStates.CUTSCENE);
+		LoveMusicManager.Instance.StartCutscene();
 
 	}
 	
@@ -60,7 +61,7 @@ public class MoveInAnimManager : MonoBehaviour {
 
 	private void PlayMoan(){
 
-		AudioSource.PlayClipAtPoint(moan, transform.position);
+		GetComponent<AudioSource>().Play();
 
 	}
 }
