@@ -1,8 +1,8 @@
 [
 	{
-		"title": "mailman.start",
+		"title": "musician.start",
 		"tags": "",
-		"body": "<<if $spoken_to_mailman == 0>>\n    MAILMAN : first talk\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    MAILMAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        MAILMAN: day one\n        [[end day|mailman.dayone]]\n    <<elseif $mailman_day is 1>>\n        MAILMAN: day two\n        [[end day|mailman.daytwo]]\n    <<elseif $mailman_day is 2>>\n        MAILMAN: day three\n        [[end day|mailman.daythree]]\n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    MAILMAN : first talk\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $musician_talked_to_today is 1>>\n    MUSICIAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $musician_day is 0>>\n        MUSICIAN: day one\n        [[end day|musician.dayone]]\n    <<elseif $musician_day is 1>>\n        MUSICIAN: day two\n        [[end day|musician.daytwo]]\n    <<elseif $musician_day is 2>>\n        MUSICIAN: day three\n        [[end day|musician.daythree]]\n    <<endif>>\n<<endif>>\n\n",
 		"position": {
 			"x": 272,
 			"y": 675
@@ -10,9 +10,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.dayone",
+		"title": "musician.dayone",
 		"tags": "dayone",
-		"body": "<<addlove CurrentTarget>>\n<<set $mailman_day to 1>>\n<<set $mailman_talked_to_today to 1>>",
+		"body": "<<addlove CurrentTarget>>\n<<set $musician_day to 1>>\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 530,
 			"y": 425
@@ -20,9 +20,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.dontbelieve",
+		"title": "musician.dontbelieve",
 		"tags": "dayone",
-		"body": "JACQUES: yeah? well you should check out my TROPHIES one day\nJACQUES: TROPHIES for all the weights i lifted in game design class\nJACQUES: i could easily lift the entire PROGRAMMING TEAM\nJACQUES: i'll see you tomorrow, BRO\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: yeah? well you should check out my TROPHIES one day\nJACQUES: TROPHIES for all the weights i lifted in game design class\nJACQUES: i could easily lift the entire PROGRAMMING TEAM\nJACQUES: i'll see you tomorrow, BRO\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1223,
 			"y": -2
@@ -30,7 +30,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.socool",
+		"title": "musician.socool",
 		"tags": "dayone",
 		"body": "JACQUES: thanks BRO, i don't work out every day to be a DWEEB\nJACQUES: prove to me you're not a dweeb. how much can you bench???\n[[50 pounds|jock.wrongweight]][[419 pounds|jock.wrongweight]][[1000 pounds|jock.rightweight]]",
 		"position": {
@@ -40,9 +40,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.wrongweight",
+		"title": "musician.wrongweight",
 		"tags": "dayone",
-		"body": "JACQUES: wow, sounds like you need to hit the GYM sometime\nJACQUES: maybe we can be GYM BUDDIES\nJACQUES: SYKE come see me when you can bench at least 1000 pounds!!\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: wow, sounds like you need to hit the GYM sometime\nJACQUES: maybe we can be GYM BUDDIES\nJACQUES: SYKE come see me when you can bench at least 1000 pounds!!\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1487,
 			"y": 192
@@ -50,9 +50,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.rightweight",
+		"title": "musician.rightweight",
 		"tags": "dayone",
-		"body": "JACQUES: wow 1000 huh?\nJACQUES: you're pretty close to me, except i can bench A MILLION\nJACQUES: that's okay you're off to a good start\nJACQUES: i really enjoyed talking to you today\nJACQUES: come back tomorrow and we can COMPARE MUSCLES\n<<addlove CurrentTarget>>\n<<set $mailman_day to 1>>\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: wow 1000 huh?\nJACQUES: you're pretty close to me, except i can bench A MILLION\nJACQUES: that's okay you're off to a good start\nJACQUES: i really enjoyed talking to you today\nJACQUES: come back tomorrow and we can COMPARE MUSCLES\n<<addlove CurrentTarget>>\n<<set $musician_day to 1>>\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1486,
 			"y": 429
@@ -60,9 +60,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.air",
+		"title": "musician.air",
 		"tags": "dayone",
-		"body": "JACQUES: AIR?!?!\nJACQUES: BRO i can lift at least a billion more pounds of air than you\nJACQUES: come back tomorrow and i'll lift the world's largest JAR OF AIR\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: AIR?!?!\nJACQUES: BRO i can lift at least a billion more pounds of air than you\nJACQUES: come back tomorrow and i'll lift the world's largest JAR OF AIR\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 884,
 			"y": 260
@@ -70,9 +70,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.hanghigh",
+		"title": "musician.hanghigh",
 		"tags": "daytwo",
-		"body": "JACQUES: what? a high five?\nJACQUES: BRO how lame can you GET?\nJACQUES: wow this really bums me out\nJACQUES: just come and talk to me tomorrow, i need to lift something to get all this LAME out of my system\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: what? a high five?\nJACQUES: BRO how lame can you GET?\nJACQUES: wow this really bums me out\nJACQUES: just come and talk to me tomorrow, i need to lift something to get all this LAME out of my system\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 887,
 			"y": 525
@@ -80,7 +80,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.hangfist",
+		"title": "musician.hangfist",
 		"tags": "daytwo",
 		"body": "JACQUES: AW YEAH BRO YOU GOT IT\nJACQUES: that was SICK\nJACQUES: BRO, that got me so pumped it's time for a POP QUIZ\nJACQUES: READY? this won't be EASY\nJACQUES: how many pounds can i lift?\n[[2000, next!|jock.quizwrong]][[that's easy, a BILLION|jock.quizparttwo]][[no brainer, 149,291|jock.quizwrong]]",
 		"position": {
@@ -90,9 +90,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.quizwrong",
+		"title": "musician.quizwrong",
 		"tags": "daytwo",
-		"body": "JACQUES: WRONG\nJACQUES: sounds like you need to work on your MENTAL muscles as much as your MUSCLE muscles\nJACQUES: see me tomorrow when you've curled a few BOOKS\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: WRONG\nJACQUES: sounds like you need to work on your MENTAL muscles as much as your MUSCLE muscles\nJACQUES: see me tomorrow when you've curled a few BOOKS\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1182,
 			"y": 1032
@@ -100,7 +100,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.quizparttwo",
+		"title": "musician.quizparttwo",
 		"tags": "daytwo",
 		"body": "JACQUES: ROUND TWO\nJACQUES: how big are my muscles?\n[[10 inches?|jock.wrongquiz]][[28 inches?|jock.quizpartthree]][[a billion?|jock.wrongquiz2]]",
 		"position": {
@@ -110,9 +110,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.wrongquiz2",
+		"title": "musician.wrongquiz2",
 		"tags": "daytwo",
-		"body": "JACQUES: HAH\nJACQUES: i WISH!\nJACQUES: try again TOMORROW\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: HAH\nJACQUES: i WISH!\nJACQUES: try again TOMORROW\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1435,
 			"y": 1033
@@ -120,7 +120,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.quizpartthree",
+		"title": "musician.quizpartthree",
 		"tags": "daytwo",
 		"body": "JACQUES: WOW you're really IMPRESSING ME\nJACQUES: are you ready for your LAST ONE?\nJACQUES: what school is my GAME DESIGN DEGREE from?\n[[swoleland college|jock.quizwrong]][[west protein university|jock.quizwrong]][[fullgains university |jock.finishquiz]]",
 		"position": {
@@ -130,9 +130,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.finishquiz",
+		"title": "musician.finishquiz",
 		"tags": "",
-		"body": "JACQUES: that's right! the one and only FULLGAINS UNIVERSITY\nJACQUES: that's where the best and brightest learn to PLAY GAMES for a living\nJACQUES: i have a bachelor's in SPEED RUNNING\nJACQUES: stop by tomorrow and i'll show you my SICK STRATS\nJACQUES: i can't wait to see you again!\n<<addlove CurrentTarget>>\n<<set $mailman_day to 2>>\n<<set $mailman_talked_to_today to 1>>",
+		"body": "JACQUES: that's right! the one and only FULLGAINS UNIVERSITY\nJACQUES: that's where the best and brightest learn to PLAY GAMES for a living\nJACQUES: i have a bachelor's in SPEED RUNNING\nJACQUES: stop by tomorrow and i'll show you my SICK STRATS\nJACQUES: i can't wait to see you again!\n<<addlove CurrentTarget>>\n<<set $musician_day to 2>>\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 1731,
 			"y": 770
@@ -140,9 +140,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.startquest",
+		"title": "musician.startquest",
 		"tags": "daythree",
-		"body": "JACQUES: really BRO?\nJACQUES: i think we're on a fast track to be BEST FRIENDS\nJACQUES: heck, maybe i'll even move in to you!\nJACQUES: REMEMBER... MUSICIAN has my CONTROLLER\n<<set $mailman_started_quest to 1>>\n<<set $mailman_ended_quest to 1>>",
+		"body": "JACQUES: really BRO?\nJACQUES: i think we're on a fast track to be BEST FRIENDS\nJACQUES: heck, maybe i'll even move in to you!\nJACQUES: REMEMBER... MUSICIAN has my CONTROLLER\n<<set $musician_started_quest to 1>>\n<<set $musician_ended_quest to 1>>",
 		"position": {
 			"x": 872,
 			"y": 1275
@@ -150,7 +150,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.noquest",
+		"title": "musician.noquest",
 		"tags": "",
 		"body": "JACQUES: let me know when you want to do a BRO a favor",
 		"position": {
@@ -160,9 +160,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.daytwo",
+		"title": "musician.daytwo",
 		"tags": "",
-		"body": "<<addlove CurrentTarget>>\n<<set $mailman_day to 2>>\n<<set $mailman_talked_to_today to 1>>",
+		"body": "<<addlove CurrentTarget>>\n<<set $musician_day to 2>>\n<<set $musician_talked_to_today to 1>>",
 		"position": {
 			"x": 525,
 			"y": 677
@@ -170,7 +170,7 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.daythree",
+		"title": "musician.daythree",
 		"tags": "",
 		"body": "<<addlove CurrentTarget>>",
 		"position": {
