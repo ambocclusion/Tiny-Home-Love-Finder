@@ -895,6 +895,11 @@ Prefab:
       propertyPath: m_Name
       value: Mailman
       objectReference: {fileID: 0}
+    - target: {fileID: 114846972597950782, guid: 117d9b8244fb4441488eb0b60d52765a,
+        type: 2}
+      propertyPath: talkToNode
+      value: mailman.start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
   m_IsPrefabParent: 0
