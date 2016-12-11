@@ -2,20 +2,20 @@
 	{
 		"title": "mailman.start",
 		"tags": "",
-		"body": "<<if $spoken_to_mailman == 0>>\n    MAILMAN : day one\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    MAILMAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        MAILMAN: BRO, got something for me to lift?\n        [[lift me!|jock.liftme]][[plenty of air around|jock.air]]\n    <<elseif $mailman_day is 1>>\n        MAILMAN: come back to touch my muscles?\n        MAILMAN: i would too\n        MAILMAN: i really liked our REAL TALK yesterday\n        MAILMAN: i think you can hang\n        [[high five!|jock.hanghigh]][[let's fist bump|jock.hangfist]]\n    <<elseif $mailman_day is 2>>\n        <<if $mailman_started_quest is 0>>\n            JACQUES: hey BRO did you bring any controllers?\n            JACQUES: i'd let you play my SUPER CRIMBENDO but MUSICIAN has my SWERVEBIRD controller\n            JACQUES: yo BRO would you go get my controller for me?\n            [[sure|jock.startquest]][[maybe not...|jock.noquest]]\n        <<else>>\n            <<if $mailman_ended_quest is 0>>\n                JACQUES: did you get my controller back from MUSICIAN??\n                JACQUES: WHAT? you didn't?\n                JACQUES: BRO come back to me when you got my controller\n                JACQUES: REMEMBER... MUSICIAN has my CONTROLLER\n                <<stop>>\n            <<elseif $mailman_ended_quest is 1>>\n                JACQUES: BRO you got my controller????\n                JACQUES: this is great!\n                JACQUES: hey BRO can i come inside and play SUPER CRIMBENDO?\n                JACQUES: i'll get cozy inside of you and LIFT WEIGHTS!\n                <<addlove CurrentTarget>>\n            <<endif>>\n        <<endif>>\n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    MAILMAN : first talk\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    MAILMAN: come back tomorrow\n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        MAILMAN: day one\n        [[end day|mailman.dayone]]\n    <<elseif $mailman_day is 1>>\n        MAILMAN: day two\n        [[end day|mailman.daytwo]]\n    <<elseif $mailman_day is 2>>\n        MAILMAN: day three\n        [[end day|mailman.daythree]]\n    <<endif>>\n<<endif>>\n\n",
 		"position": {
-			"x": 277,
-			"y": 708
+			"x": 272,
+			"y": 675
 		},
 		"colorID": 0
 	},
 	{
-		"title": "mailman.liftme",
+		"title": "mailman.dayone",
 		"tags": "dayone",
-		"body": "JACQUES: wow you'd really let me do that???\nJACQUES: you don't want me to lift you\nJACQUES: you'd go too high and get SCARED\nJACQUES: just so you know i can lift like 100 of you\nJACQUES: you barely weigh as much as my diploma\n[[i don't believe|jock.dontbelieve]][[you're so COOL|jock.socool]]",
+		"body": "",
 		"position": {
-			"x": 883,
-			"y": -3
+			"x": 530,
+			"y": 425
 		},
 		"colorID": 0
 	},
@@ -156,6 +156,26 @@
 		"position": {
 			"x": 878,
 			"y": 1522
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.daytwo",
+		"tags": "",
+		"body": "Empty Text",
+		"position": {
+			"x": 525,
+			"y": 677
+		},
+		"colorID": 0
+	},
+	{
+		"title": "mailman.daythree",
+		"tags": "",
+		"body": "Empty Text",
+		"position": {
+			"x": 525,
+			"y": 906
 		},
 		"colorID": 0
 	}
