@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLoopTime: 5.05
-  endLoopTime: 70.9
+  endLoopTime: 70.7
 --- !u!1 &1198069774 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1364451837005530, guid: be65dbdff79574f4a93a9773d944da13,
