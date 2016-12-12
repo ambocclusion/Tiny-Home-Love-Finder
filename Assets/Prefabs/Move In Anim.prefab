@@ -1150,7 +1150,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b60bc5fed042c4526a3bafadee6900ff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d0c5987fcb54d46d0b0320e211696df3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   cam: {fileID: 1774332620816318}
   ExplodeParticle: {fileID: 198370171232859942}
   SecondExplodeParticle: {fileID: 198925769832433692}
-  moan: {fileID: 8300000, guid: b60bc5fed042c4526a3bafadee6900ff, type: 3}
+  moan: {fileID: 8300000, guid: d0c5987fcb54d46d0b0320e211696df3, type: 3}
 --- !u!114 &114748862915031936
 MonoBehaviour:
   m_ObjectHideFlags: 1
