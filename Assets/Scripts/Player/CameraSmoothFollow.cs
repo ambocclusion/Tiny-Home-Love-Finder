@@ -26,7 +26,7 @@ public class CameraSmoothFollow : SingletonMainBehaviour<CameraSmoothFollow> {
 	protected override void FixedGameUpdate(){
 
 		transform.position = Vector3.Lerp(transform.position, FollowTarget.position + transform.TransformVector(_currentOffset), FollowSpeed);
-		transform.eulerAngles = new Vector3(Mathf.LerpAngle(transform.eulerAngles.x, _currentAngle.x, .1f), Mathf.LerpAngle(transform.eulerAngles.y, _currentAngle.y, .1f), transform.eulerAngles.z);
+		transform.eulerAngles = new Vector3(Mathf.LerpAngle(transform.eulerAngles.x, _currentAngle.x, .035f), Mathf.LerpAngle(transform.eulerAngles.y, _currentAngle.y, .035f), transform.eulerAngles.z);
 
 	}
 

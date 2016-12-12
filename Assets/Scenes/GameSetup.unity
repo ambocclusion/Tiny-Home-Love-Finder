@@ -4225,7 +4225,7 @@ Prefab:
     - target: {fileID: 114059992864600660, guid: 5a0197e44f7eb494cb91a5a91508e4c8,
         type: 2}
       propertyPath: DayLength
-      value: 3
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a0197e44f7eb494cb91a5a91508e4c8, type: 2}
