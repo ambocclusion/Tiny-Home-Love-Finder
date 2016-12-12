@@ -23,6 +23,8 @@ public class TimeManager : SingletonMainBehaviour<TimeManager> {
 
 	public bool UseRealTime = false;
 
+	public bool PauseOnDialogue = false;
+
 	private DialogueRunner _dialogue;
 
 	void Start(){
@@ -39,7 +41,7 @@ public class TimeManager : SingletonMainBehaviour<TimeManager> {
 
 	protected override void FixedGameUpdate(){
 
-		if(_dialogue.isDialogueRunning)
+		if(PauseOnDialogue && _dialogue.isDialogueRunning)
 			return;
 
 		CurrentDayTime += Time.fixedDeltaTime;

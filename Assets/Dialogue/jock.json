@@ -22,7 +22,7 @@
 	{
 		"title": "jock.dontbelieve",
 		"tags": "dayone",
-		"body": "JACQUES: yeah? well you should check out my TROPHIES one day\nJACQUES: TROPHIES for all the weights i lifted in game design class\nJACQUES: i could easily lift the entire PROGRAMMING TEAM\nJACQUES: i'll see you tomorrow, BRO\n<<set $jock_talked_to_today to 1>>",
+		"body": "JACQUES: yeah? well you should check out my TROPHIES one day\nJACQUES: TROPHIES for all the weights i lifted in game design class\nJACQUES: i could easily CARRY the entire PROGRAMMING TEAM\nJACQUES: i'll see you tomorrow, BRO\n<<set $jock_talked_to_today to 1>>",
 		"position": {
 			"x": 1223,
 			"y": -2
