@@ -41,8 +41,10 @@ public class AiManager : MainBehaviour {
 
 		GetComponent<AutonomousVehicle>().CanMove = !IsIdling;
 
-		if(transform.position.y < -10f)
+		if(transform.position.y < -10f){
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
 			transform.position = _defaultPos + (Vector3.up * 30f);
+		}
 
 	}
 
