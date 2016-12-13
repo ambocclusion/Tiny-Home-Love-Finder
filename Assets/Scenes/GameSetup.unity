@@ -9103,6 +9103,10 @@ Prefab:
       propertyPath: fader
       value: 
       objectReference: {fileID: 1105905159}
+    - target: {fileID: 1191767955758330, guid: 86d6ca0b6090f453aac0cf9fb69f8c9d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86d6ca0b6090f453aac0cf9fb69f8c9d, type: 2}
   m_IsPrefabParent: 0
@@ -10261,7 +10265,7 @@ Prefab:
     - target: {fileID: 114059992864600660, guid: 5a0197e44f7eb494cb91a5a91508e4c8,
         type: 2}
       propertyPath: DayLength
-      value: 120
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114059992864600660, guid: 5a0197e44f7eb494cb91a5a91508e4c8,
         type: 2}

@@ -42,7 +42,7 @@
 	{
 		"title": "musician.acceptquest",
 		"tags": "daytwo",
-		"body": "LAMMY: ♪ thanks, GIRL ♪\nLAMMY: ♪ bug MAILMAN, get me that package ♪\n<<set $musician_accept_quest to 1>>\n<<set $musician_done_quest to 1>>",
+		"body": "LAMMY: ♪ thanks, GIRL ♪\nLAMMY: ♪ bug MAILMAN, get me that package ♪\n<<set $musician_accept_quest to 1>>",
 		"position": {
 			"x": 639,
 			"y": 683

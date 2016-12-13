@@ -44,11 +44,11 @@ public class PlayerMovement : MainBehaviour {
 
 		if(PlayerInput == Vector2.zero){
 			anim.SetBool("walking", false);
-			smoke.Stop();
+			//smoke.Stop();
 		}
 		else if(PlayerInput != Vector2.zero){
 			anim.SetBool("walking", true);
-			smoke.Play();
+			//smoke.Play();
 		}
 
 		if(transform.position.y < -10f)
