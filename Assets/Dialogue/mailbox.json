@@ -1,0 +1,12 @@
+[
+	{
+		"title": "mailbox.start",
+		"tags": "",
+		"body": "<<if $mailman_quest_active is 0>>\n    Welcome to the automated mail delivery system. \n    SCANNING FOR MAIL...\n    ....\n    You currently have no letters in your possession.\n    Thank you for stopping by.\n<<else>>\n    <<if $mailman_started_quest is 1>>\n        <<if $mailman_finished_quest is 0>>\n            Letter accepted. Location approved.\n            Please insert stamp...\n            ....ERROR....\n            Letter will be held until further notice. Please contact your local post office.\n            <<set $mailman_finished_quest to 1>>\n            <<set $mailmain_quest_active to 0>>\n        <<endif>>\n    <<endif>>\n    <<if $mailman_started_quest2 is 1>>\n        <<if $mailman_finished_quest2 is 0>>\n            Letter accepted. Location approved. \n            DETECTED PERISHABLE ITEMS. ONE FULL SIZED SEA BASS.\n            Your letter should arrive in 1-2 business days. \n            Thank you for working with us. Hope you find a better job, probably won't though.\n            Goodbye.\n            <<set $mailman_finished_quest2 to 1>>\n            <<set $mailmain_quest_active to 0>>\n        <<endif>>\n    <<endif>>\n<<endif>>",
+		"position": {
+			"x": 539,
+			"y": 261
+		},
+		"colorID": 0
+	}
+]

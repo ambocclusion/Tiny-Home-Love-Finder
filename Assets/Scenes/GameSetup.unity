@@ -2216,7 +2216,7 @@ Prefab:
     - target: {fileID: 114719970087280762, guid: 367f5c10407ec42589020bb288f520e8,
         type: 2}
       propertyPath: sourceText.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4999270816623692, guid: 367f5c10407ec42589020bb288f520e8, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2300,6 +2300,11 @@ Prefab:
       propertyPath: sourceText.Array.data[4]
       value: 
       objectReference: {fileID: 4900000, guid: 647c0a5304a35480d8ee4ad65f2339b9, type: 3}
+    - target: {fileID: 114719970087280762, guid: 367f5c10407ec42589020bb288f520e8,
+        type: 2}
+      propertyPath: sourceText.Array.data[5]
+      value: 
+      objectReference: {fileID: 4900000, guid: 43ebbf8c978de4c9197f9ab7bf715fff, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 367f5c10407ec42589020bb288f520e8, type: 2}
   m_IsPrefabParent: 0
@@ -12646,6 +12651,11 @@ Prefab:
     - target: {fileID: 4263039535834402, guid: b5c254cae5e1446138903deb6049decb, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90.50001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114340930282850110, guid: b5c254cae5e1446138903deb6049decb,
+        type: 2}
+      propertyPath: talkToNode
+      value: mailbox.start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5c254cae5e1446138903deb6049decb, type: 2}
