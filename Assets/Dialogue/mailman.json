@@ -12,7 +12,7 @@
 	{
 		"title": "mailman.choice1",
 		"tags": "dayone",
-		"body": "CLAUDE: Heck yes my dude, thank you for the butt creme. \nCLAUDE: This is going to make running around in these tight pants a non-issue.\nCLAUDE: I find some pretty cool things in the mail, I might have something for you tomorrow.\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: Heck yes my dude, thank you for the butt creme. \nCLAUDE: This is going to make running around in these tight pants a non-issue.\nCLAUDE: I find some pretty cool things in the mail, I might have something for you tomorrow.\n<<set $mailman_talked_to_today to 1>>\n<<addlove CurrentTarget>>",
 		"position": {
 			"x": 647,
 			"y": -95
@@ -52,7 +52,7 @@
 	{
 		"title": "mailman.choice5",
 		"tags": "daytwo",
-		"body": "CLAUDE: LOOK AT YOU! \nCLAUDE: You put that letter in the mailbox like a freakin champ.\nCLAUDE: I've never seen such amazing work from a rookie.\nCLAUDE: If I had to be picky I would say make sure the stamp is on it next time.\nCLAUDE: I took it off before giving it too you. \nCLAUDE: Guess I'll have to keep whatevers inside. Birthday money from grandma hopefully.\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: LOOK AT YOU! \nCLAUDE: You put that letter in the mailbox like a freakin champ.\nCLAUDE: I've never seen such amazing work from a rookie.\nCLAUDE: If I had to be picky I would say make sure the stamp is on it next time.\nCLAUDE: I took it off before giving it too you. \nCLAUDE: Guess I'll have to keep whatevers inside. Birthday money from grandma hopefully.\n<<set $mailman_talked_to_today to 1>>\n<<addlove CurrentTarget>>",
 		"position": {
 			"x": 643,
 			"y": 916
