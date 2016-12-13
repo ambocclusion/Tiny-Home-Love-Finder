@@ -52,8 +52,9 @@ public class LoveTarget : MonoBehaviour {
 		if(Me.PlayerRating >= LoveManager.Instance.LikabilityToMoveIn){
 			LoveManager.Instance.MoveIn(this);
 		}
-
-		LoveMusicManager.Instance.PlayOneShotMusic(audioSource.clip);
+		else
+			LoveMusicManager.Instance.PlayOneShotMusic(audioSource.clip);
+		
 
 	}
 
