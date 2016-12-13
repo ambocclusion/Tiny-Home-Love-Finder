@@ -2,9 +2,9 @@
 	{
 		"title": "mailman.start",
 		"tags": "",
-		"body": "<<if $spoken_to_mailman == 0>>\n    CLAUDE: Hey, I'm pretty busy TRYING to do my job. \n    CLAUDE: I'd love if I could just get a day off. \n    CLAUDE: Between you and me, this job freaking stinks!\n    CLAUDE: My boss has been on my butt all day, and it already has a rash.\n[[Here's some fresh butt creme! |mailman.choice1]]\n[[Get yo nasty butt outta here! |mailman.choice2]]\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        CLAUDE: I was going to keep this for myself.\n        CLAUDE: I just hate listing things on GregsList.\n        CLAUDE: Don't tell me what it was or I'll get jealous. \n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    CLAUDE: This mail isn't going to deliver itself. Wish it did though. \n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        CLAUDE: Nice to see you again. This creme is working it's magic.\n        CLAUDE: Okay, so you want to be a member of the Citizens Delivery Union?\n        CLAUDE: They have realllllly good benefits. Mailmans promise. \n        CLAUDE: And no you can't do a mailmans promise until you join.\n        [[ I want to be a part of your secret club! |mailman.choice3]]\n        [[ That sounds super lame. Who would want to be a mailman? |mailman.choice4]]\n        \n    <<elseif $mailman_day is 1>>\n        CLAUDE: Welcome back mailman in training. Or mail...house? \n        CLAUDE: Today you have your hardest task ahead of you. \n        CLAUDE: You must.\n        CLAUDE: DELIVER \n        CLAUDE: A\n        CLAUDE: LETTER!!\n        CLAUDE: NOW GET TO IT MAIL BOY! \n       \n    <<elseif $mailman_day is 2>>\n        CLAUDE: You've proven that you can work hard.\n        CLAUDE: I'll be sure to tell the higher ups about you.\n        CLAUDE: My recommendation is of the highest regard. \n        CLAUDE: BUT! I have one more request. I need you to drop this off.\n        CLAUDE: It's my two week notice. But I stuck a raw fish in the envelope.\n        CLAUDE: It's gonna stink to high heaven. I've waited 3 long months for this.\n        CLAUDE: My job is yours now. \n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    CLAUDE: Hey, I'm pretty busy TRYING to do my job. \n    CLAUDE: I'd love if I could just get a day off. \n    CLAUDE: Between you and me, this job freaking stinks!\n    CLAUDE: My boss has been on my butt all day, and it already has a rash.\n[[Here's some fresh butt creme! |mailman.choice1]]\n[[Get yo nasty butt outta here! |mailman.choice2]]\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        CLAUDE: I was going to keep this for myself.\n        CLAUDE: I just hate listing things on GregsList.\n        CLAUDE: Don't tell me what it was or I'll get jealous. \n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    CLAUDE: This mail isn't going to deliver itself. Wish it did though. \n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        CLAUDE: Nice to see you again. This creme is working it's magic.\n        CLAUDE: Okay, so you want to be a member of the Citizens Delivery Union?\n        CLAUDE: They have realllllly good benefits. Mailmans promise. \n        CLAUDE: And no you can't do a mailmans promise until you join.\n        [[ I want to be a part of your secret club! |mailman.choice3]]\n        [[ That sounds super lame. Who would want to be a mailman? |mailman.choice4]]\n        \n    <<elseif $mailman_day is 1>>\n        CLAUDE: Welcome back mailman in training. Or mail...house? \n        CLAUDE: Today you have your hardest task ahead of you. \n        CLAUDE: You must.\n        CLAUDE: DELIVER \n        CLAUDE: A\n        CLAUDE: LETTER!!\n        CLAUDE: NOW GET TO IT MAIL BOY! \n        [[ YES POSTMASTER! I won't let you down! |mailman.choice5]]\n         DELIVER LETTER TO MAILBOX\n        [[ I really am not feeling this at all. |mailman.choice6]]\n       \n    <<elseif $mailman_day is 2>>\n        CLAUDE: You've proven that you can work hard.\n        CLAUDE: I'll be sure to tell the higher ups about you.\n        CLAUDE: My recommendation is of the highest regard. \n        CLAUDE: BUT! I have one more request. I need you to drop this off.\n        CLAUDE: It's my two week notice. But I stuck a raw fish in the envelope.\n        CLAUDE: It's gonna stink to high heaven. I've waited 3 long months for this.\n        CLAUDE: My job is yours now. \n    <<endif>>\n<<endif>>\n\n",
 		"position": {
-			"x": 272,
+			"x": 274,
 			"y": 676
 		},
 		"colorID": 0
@@ -50,19 +50,19 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.declinequest",
+		"title": "mailman.choice5",
 		"tags": "daytwo",
-		"body": "LAMMY: ...\nLAMMY: you need to learn how to sing\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: LOOK AT YOU! \nCLAUDE: You put that letter in the mailbox like a freakin champ.\nCLAUDE: I've never seen such amazing work from a rookie.\nCLAUDE: If I had to be picky I would say make sure the stamp is on it next time.\nCLAUDE: I took it off before giving it too you. \nCLAUDE: Guess I'll have to keep whatevers inside. Birthday money from grandma hopefully.\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
-			"x": 638,
-			"y": 900
+			"x": 643,
+			"y": 916
 		},
 		"colorID": 0
 	},
 	{
-		"title": "mailman.askjock",
+		"title": "mailman.choice6",
 		"tags": "daythree",
-		"body": "LAMMY: that kid only cares about his muscles and his degree\nLAMMY: just leave me alone\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: Ooof that really hurts my poor little heart. \nCLAUDE: This has not been a good day for me or my feelings.\nCLAUDE: Maybe opening a few of these letters will cheer me up. \nCLAUDE: Yeah. You don't need to talk to any mean houses today. \n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 655,
 			"y": 1135
