@@ -19,6 +19,12 @@ public class LoveMusicManager : SingletonMainBehaviour<LoveMusicManager> {
 
 	public void StartCutscene(){
 
+		PlayOneShotMusic(LoveMusic);
+
+	}
+
+	public void PlayOneShotMusic(AudioClip clip){
+
 		looper.enabled = false;
 		GetComponent<AudioSource>().clip = LoveMusic;
 		timeBeforeCutscene = GetComponent<AudioSource>().time;
