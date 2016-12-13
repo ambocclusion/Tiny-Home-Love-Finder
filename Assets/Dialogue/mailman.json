@@ -1,8 +1,8 @@
 [
 	{
-		"title": "musician.start",
+		"title": "mailman.start",
 		"tags": "",
-		"body": "<<if $spoken_to_musician == 0>>\n    LAMMY: hey GIRL, i haven't seen you before, i'm LAMMY\n    LAMMY: i just got kicked out of my band so if you got one, i'm looking to join\n    <<set $spoken_to_musician to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        LAMMY: JACQUES is looking for his SWERVEBIRD?\n        LAMMY: sure, here it is.\n        LAMMY: ♪ i'm never borrowing anything from him again ♪\n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $musician_talked_to_today is 1>>\n    LAMMY: ♪ you're totally bothering me ♪\n    LAMMY: ♪ come back tomorrow when i'm not busy ♪\n    <<stop>>\n<<else>>\n    <<if $musician_day is 0>>\n        LAMMY: hey GIRL, i'm super bummed out since my band dropped me\n        LAMMY: i need a lyric that's DARK and BROODING that rhymes with \"SAD\"\n        [[♪ cats are totally rad ♪|musician.wronglyric1]][[♪ i really hate you, dad ♪|musician.wronglyric2]][[♪ don't kick me out of the band, BRAD ♪|musician.rightlyric]]\n    <<elseif $musician_day is 1>>\n        <<if $musician_accept_quest is 0>>\n            LAMMY: GIRL, i have a problem\n            LAMMY: MAILMAN has my package and i can't wait for him to deliver it\n            LAMMY: can you go bug MAILMAN for my package?\n            [[♪good as done♪|musician.acceptquest]][[♪get it yourself♪|musician.declinequest]]\n        <<else>>\n            <<if $musician_done_quest is 0>>\n                LAMMY: ♪ MAILMAN has the object of my desire ♪\n                LAMMY: ♪ get that package and find my love ♪\n                LAMMY: ♪ those new strings will light my fire ♪\n            <<stop>>\n            <<else>>\n                LAMMY: RAD!\n                LAMMY: GIRL, i'm your number 1 fan!\n                <<addlove CurrentTarget>>\n                <<set $musician_day to 2>>\n                <<set $musician_talked_to_today to 1>>\n            <<endif>>\n        <<endif>>\n    <<elseif $musician_day is 2>>\n        LAMMY: GIRL, i've got a song, i've got the strings but nobody to listen\n        LAMMY: what do i do?\n        [[ask jacques|musician.askjock]][[i'll listen|musician.askinside]]\n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    LAMMY: hey GIRL, i haven't seen you before, i'm LAMMY\n    LAMMY: i just got kicked out of my band so if you got one, i'm looking to join\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        LAMMY: JACQUES is looking for his SWERVEBIRD?\n        LAMMY: sure, here it is.\n        LAMMY: ♪ i'm never borrowing anything from him again ♪\n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    LAMMY: ♪ you're totally bothering me ♪\n    LAMMY: ♪ come back tomorrow when i'm not busy ♪\n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        LAMMY: hey GIRL, i'm super bummed out since my band dropped me\n        LAMMY: i need a lyric that's DARK and BROODING that rhymes with \"SAD\"\n        [[♪ cats are totally rad ♪|mailman.wronglyric1]][[♪ i really hate you, dad ♪|mailman.wronglyric2]][[♪ don't kick me out of the band, BRAD ♪|mailman.rightlyric]]\n    <<elseif $mailman_day is 1>>\n        <<if $mailman_accept_quest is 0>>\n            LAMMY: GIRL, i have a problem\n            LAMMY: MAILMAN has my package and i can't wait for him to deliver it\n            LAMMY: can you go bug MAILMAN for my package?\n            [[♪good as done♪|mailman.acceptquest]][[♪get it yourself♪|mailman.declinequest]]\n        <<else>>\n            <<if $mailman_done_quest is 0>>\n                LAMMY: ♪ MAILMAN has the object of my desire ♪\n                LAMMY: ♪ get that package and find my love ♪\n                LAMMY: ♪ those new strings will light my fire ♪\n            <<stop>>\n            <<else>>\n                LAMMY: RAD!\n                LAMMY: GIRL, i'm your number 1 fan!\n                <<addlove CurrentTarget>>\n                <<set $mailman_day to 2>>\n                <<set $mailman_talked_to_today to 1>>\n            <<endif>>\n        <<endif>>\n    <<elseif $mailman_day is 2>>\n        LAMMY: GIRL, i've got a song, i've got the strings but nobody to listen\n        LAMMY: what do i do?\n        [[ask jacques|mailman.askjock]][[i'll listen|mailman.askinside]]\n    <<endif>>\n<<endif>>\n\n",
 		"position": {
 			"x": 272,
 			"y": 676
@@ -10,9 +10,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.wronglyric1",
+		"title": "mailman.wronglyric1",
 		"tags": "dayone",
-		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ cats are totally rad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ cats are totally rad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 647,
 			"y": -95
@@ -20,9 +20,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.rightlyric",
+		"title": "mailman.rightlyric",
 		"tags": "dayone",
-		"body": "LAMMY: that lyric really speaks to my soul\nLAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ don't kick me out of the band, BRAD ♪\nLAMMY: wow this is great CONTENT\nLAMMY: i can't wait to put this up on my 'tube\nLAMMY: ...\nLAMMY: nice jamming, GIRL\n<<addlove CurrentTarget>>\n<<set $musician_day to 1>>\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: that lyric really speaks to my soul\nLAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ don't kick me out of the band, BRAD ♪\nLAMMY: wow this is great CONTENT\nLAMMY: i can't wait to put this up on my 'tube\nLAMMY: ...\nLAMMY: nice jamming, GIRL\n<<addlove CurrentTarget>>\n<<set $mailman_day to 1>>\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 652,
 			"y": 392
@@ -30,9 +30,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.wronglyric2",
+		"title": "mailman.wronglyric2",
 		"tags": "dayone",
-		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ i really hate you, dad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ i really hate you, dad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 651,
 			"y": 144
@@ -40,9 +40,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.acceptquest",
+		"title": "mailman.acceptquest",
 		"tags": "daytwo",
-		"body": "LAMMY: ♪ thanks, GIRL ♪\nLAMMY: ♪ bug MAILMAN, get me that package ♪\n<<set $musician_accept_quest to 1>>\n<<set $musician_done_quest to 1>>",
+		"body": "LAMMY: ♪ thanks, GIRL ♪\nLAMMY: ♪ bug MAILMAN, get me that package ♪\n<<set $mailman_accept_quest to 1>>\n<<set $mailman_done_quest to 1>>",
 		"position": {
 			"x": 639,
 			"y": 683
@@ -50,9 +50,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.declinequest",
+		"title": "mailman.declinequest",
 		"tags": "daytwo",
-		"body": "LAMMY: ...\nLAMMY: you need to learn how to sing\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: ...\nLAMMY: you need to learn how to sing\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 641,
 			"y": 900
@@ -60,9 +60,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.askjock",
+		"title": "mailman.askjock",
 		"tags": "daythree",
-		"body": "LAMMY: that kid only cares about his muscles and his degree\nLAMMY: just leave me alone\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: that kid only cares about his muscles and his degree\nLAMMY: just leave me alone\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 655,
 			"y": 1135
@@ -70,9 +70,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.askinside",
+		"title": "mailman.askinside",
 		"tags": "daythree",
-		"body": "LAMMY: really, GIRL?\nLAMMY: but where will i play?\n[[by the bridge|musician.playbybridge]][[come inside|musician.comeinside]]",
+		"body": "LAMMY: really, GIRL?\nLAMMY: but where will i play?\n[[by the bridge|mailman.playbybridge]][[come inside|mailman.comeinside]]",
 		"position": {
 			"x": 658,
 			"y": 1449
@@ -80,9 +80,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.playbybridge",
+		"title": "mailman.playbybridge",
 		"tags": "daythree",
-		"body": "LAMMY: that rickety old thing?\nLAMMY: nobody wants to go on that thing\nLAMMY: maybe one day i'll find a place to play\n<<set $musician_talked_to_today to 1>>",
+		"body": "LAMMY: that rickety old thing?\nLAMMY: nobody wants to go on that thing\nLAMMY: maybe one day i'll find a place to play\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 1116,
 			"y": 1196
@@ -90,9 +90,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "musician.comeinside",
+		"title": "mailman.comeinside",
 		"tags": "daythree",
-		"body": "LAMMY: GIRL, YEAH\nLAMMY: we'll have a rockin' house party!\nLAMMY: i want to party with you forever\n<<set $musician_acquired to 1>>\n<<addlove CurrentTarget>>",
+		"body": "LAMMY: GIRL, YEAH\nLAMMY: we'll have a rockin' house party!\nLAMMY: i want to party with you forever\n<<set $mailman_acquired to 1>>\n<<addlove CurrentTarget>>",
 		"position": {
 			"x": 1115,
 			"y": 1448
