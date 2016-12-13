@@ -2,7 +2,7 @@
 	{
 		"title": "mailman.start",
 		"tags": "",
-		"body": "<<if $spoken_to_mailman == 0>>\n    LAMMY: hey GIRL, i haven't seen you before, i'm LAMMY\n    LAMMY: i just got kicked out of my band so if you got one, i'm looking to join\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        LAMMY: JACQUES is looking for his SWERVEBIRD?\n        LAMMY: sure, here it is.\n        LAMMY: ♪ i'm never borrowing anything from him again ♪\n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    LAMMY: ♪ you're totally bothering me ♪\n    LAMMY: ♪ come back tomorrow when i'm not busy ♪\n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        LAMMY: hey GIRL, i'm super bummed out since my band dropped me\n        LAMMY: i need a lyric that's DARK and BROODING that rhymes with \"SAD\"\n        [[♪ cats are totally rad ♪|mailman.wronglyric1]][[♪ i really hate you, dad ♪|mailman.wronglyric2]][[♪ don't kick me out of the band, BRAD ♪|mailman.rightlyric]]\n    <<elseif $mailman_day is 1>>\n        <<if $mailman_accept_quest is 0>>\n            LAMMY: GIRL, i have a problem\n            LAMMY: MAILMAN has my package and i can't wait for him to deliver it\n            LAMMY: can you go bug MAILMAN for my package?\n            [[♪good as done♪|mailman.acceptquest]][[♪get it yourself♪|mailman.declinequest]]\n        <<else>>\n            <<if $mailman_done_quest is 0>>\n                LAMMY: ♪ MAILMAN has the object of my desire ♪\n                LAMMY: ♪ get that package and find my love ♪\n                LAMMY: ♪ those new strings will light my fire ♪\n            <<stop>>\n            <<else>>\n                LAMMY: RAD!\n                LAMMY: GIRL, i'm your number 1 fan!\n                <<addlove CurrentTarget>>\n                <<set $mailman_day to 2>>\n                <<set $mailman_talked_to_today to 1>>\n            <<endif>>\n        <<endif>>\n    <<elseif $mailman_day is 2>>\n        LAMMY: GIRL, i've got a song, i've got the strings but nobody to listen\n        LAMMY: what do i do?\n        [[ask jacques|mailman.askjock]][[i'll listen|mailman.askinside]]\n    <<endif>>\n<<endif>>\n\n",
+		"body": "<<if $spoken_to_mailman == 0>>\n    CLAUDE: Hey, I'm pretty busy TRYING to do my job. \n    CLAUDE: I'd love if I could just get a day off. \n    CLAUDE: Between you and me, this job freaking stinks!\n    CLAUDE: My boss has been on my butt all day, and it already has a rash.\n[[Here's some fresh butt creme! |mailman.choice1]]\n[[Get yo nasty butt outta here! |mailman.choice2]]\n    <<set $spoken_to_mailman to 1>>\n<<endif>>\n<<if $jock_started_quest == 1>>\n    <<if $jock_ended_quest == 0>>\n        CLAUDE: I was going to keep this for myself.\n        CLAUDE: I just hate listing things on GregsList.\n        CLAUDE: Don't tell me what it was or I'll get jealous. \n    <<endif>>\n    <<set $jock_ended_quest to 1>>\n<<endif>>\n<<if $mailman_talked_to_today is 1>>\n    CLAUDE: This mail isn't going to deliver itself. Wish it did though. \n    <<stop>>\n<<else>>\n    <<if $mailman_day is 0>>\n        CLAUDE: Nice to see you again. This creme is working it's magic.\n        CLAUDE: Okay, so you want to be a member of the Citizens Delivery Union?\n        CLAUDE: They have realllllly good benefits. Mailmans promise. \n        CLAUDE: And no you can't do a mailmans promise until you join.\n        [[ I want to be a part of your secret club! |mailman.choice3]]\n        [[ That sounds super lame. Who would want to be a mailman? |mailman.choice4]]\n        \n    <<elseif $mailman_day is 1>>\n        CLAUDE: Welcome back mailman in training. Or mail...house? \n        CLAUDE: Today you have your hardest task ahead of you. \n        CLAUDE: You must.\n        CLAUDE: DELIVER \n        CLAUDE: A\n        CLAUDE: LETTER!!\n        CLAUDE: NOW GET TO IT MAIL BOY! \n       \n    <<elseif $mailman_day is 2>>\n        CLAUDE: You've proven that you can work hard.\n        CLAUDE: I'll be sure to tell the higher ups about you.\n        CLAUDE: My recommendation is of the highest regard. \n        CLAUDE: BUT! I have one more request. I need you to drop this off.\n        CLAUDE: It's my two week notice. But I stuck a raw fish in the envelope.\n        CLAUDE: It's gonna stink to high heaven. I've waited 3 long months for this.\n        CLAUDE: My job is yours now. \n    <<endif>>\n<<endif>>\n\n",
 		"position": {
 			"x": 272,
 			"y": 676
@@ -10,9 +10,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.wronglyric1",
+		"title": "mailman.choice1",
 		"tags": "dayone",
-		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ cats are totally rad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: Heck yes my dude, thank you for the butt creme. \nCLAUDE: This is going to make running around in these tight pants a non-issue.\nCLAUDE: I find some pretty cool things in the mail, I might have something for you tomorrow.\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 647,
 			"y": -95
@@ -20,9 +20,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.rightlyric",
+		"title": "mailman.choice3",
 		"tags": "dayone",
-		"body": "LAMMY: that lyric really speaks to my soul\nLAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ don't kick me out of the band, BRAD ♪\nLAMMY: wow this is great CONTENT\nLAMMY: i can't wait to put this up on my 'tube\nLAMMY: ...\nLAMMY: nice jamming, GIRL\n<<addlove CurrentTarget>>\n<<set $mailman_day to 1>>\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: W-What? \nCLAUDE: THAT'S PERFECT!\nCLAUDE: I mean that's great. Awesome.\nCLAUDE: Listen kid, I'll teach you everything. \nCLAUDE: The mailmans code of honor. How to put a letter in a mailbox.\nCLAUDE: Everythiiiiiing. But not today of course. There's far too much to cover.\nCLAUDE: Come back tomorrow for mailman boot camp. \n<<addlove CurrentTarget>>\n<<set $mailman_day to 1>>\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 652,
 			"y": 392
@@ -30,9 +30,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.wronglyric2",
+		"title": "mailman.choice2",
 		"tags": "dayone",
-		"body": "LAMMY: ♪ why'd you have to make me so SAD ♪\nLAMMY: ♪ i really hate you, dad ♪\nLAMMY: ...\nLAMMY: lame.\nLAMMY: cya tomorrow, GIRL\n<<set $mailman_talked_to_today to 1>>",
+		"body": "CLAUDE: DUDE!! \nCLAUDE: I thought I might be able to take you under my wing.\nCLAUDE: Guess my mailmans intuition is way off. Bummer. \n<<set $mailman_talked_to_today to 1>>",
 		"position": {
 			"x": 651,
 			"y": 144
@@ -40,9 +40,9 @@
 		"colorID": 0
 	},
 	{
-		"title": "mailman.acceptquest",
+		"title": "mailman.choice4",
 		"tags": "daytwo",
-		"body": "LAMMY: ♪ thanks, GIRL ♪\nLAMMY: ♪ bug MAILMAN, get me that package ♪\n<<set $mailman_accept_quest to 1>>\n<<set $mailman_done_quest to 1>>",
+		"body": "CLAUDE: OUTTA MY FACE BUCKO! \nCLAUDE: NOBODY THINKS POSTAL WORKERS ARE UNCOOL!\nCLAUDE: WHO DO YOU EVEN THINK YOU AREEEE!?\nCLAUDE: I got real work to do. LATER!\n<<set $mailman_accept_quest to 1>>\n<<set $mailman_done_quest to 1>>",
 		"position": {
 			"x": 639,
 			"y": 683
@@ -54,7 +54,7 @@
 		"tags": "daytwo",
 		"body": "LAMMY: ...\nLAMMY: you need to learn how to sing\n<<set $mailman_talked_to_today to 1>>",
 		"position": {
-			"x": 641,
+			"x": 638,
 			"y": 900
 		},
 		"colorID": 0
