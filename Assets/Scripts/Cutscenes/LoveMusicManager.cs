@@ -26,11 +26,11 @@ public class LoveMusicManager : SingletonMainBehaviour<LoveMusicManager> {
 	public void PlayOneShotMusic(AudioClip clip){
 
 		looper.enabled = false;
-		GetComponent<AudioSource>().clip = LoveMusic;
+		GetComponent<AudioSource>().clip = clip;
 		timeBeforeCutscene = GetComponent<AudioSource>().time;
 		GetComponent<AudioSource>().time = 0.0f;
 		GetComponent<AudioSource>().Play();
-		Invoke("EndCutscene", LoveMusic.length);
+		Invoke("EndCutscene", clip.length);
 
 	}
 

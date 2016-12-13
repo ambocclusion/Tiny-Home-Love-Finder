@@ -11,6 +11,8 @@ public class PlayerMovement : MainBehaviour {
 
 	public Animator anim;
 
+	public ParticleSystem smoke;
+
 	private DialogueRunner _dialogue;
 	private Rigidbody _rigid;
 
@@ -40,10 +42,14 @@ public class PlayerMovement : MainBehaviour {
 
 		_rigid.velocity = new Vector3(PlayerInput.x * (PlayerSpeed), _rigid.velocity.y, PlayerInput.y * (PlayerSpeed));
 
-		if(PlayerInput == Vector2.zero)
+		if(PlayerInput == Vector2.zero){
 			anim.SetBool("walking", false);
-		else if(PlayerInput != Vector2.zero)
+			smoke.Stop();
+		}
+		else if(PlayerInput != Vector2.zero){
 			anim.SetBool("walking", true);
+			smoke.Play();
+		}
 
 		if(transform.position.y < -10f)
 			transform.position = _defaultPos + (Vector3.up * 15f);

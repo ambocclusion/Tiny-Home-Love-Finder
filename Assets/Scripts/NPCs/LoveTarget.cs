@@ -53,7 +53,7 @@ public class LoveTarget : MonoBehaviour {
 			LoveManager.Instance.MoveIn(this);
 		}
 
-		audioSource.Play();
+		LoveMusicManager.Instance.PlayOneShotMusic(audioSource.clip);
 
 	}
 

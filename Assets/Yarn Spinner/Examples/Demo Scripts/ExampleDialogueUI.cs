@@ -94,9 +94,15 @@ namespace Yarn.Unity.Example {
 				// Display the line one character at a time
 				var stringBuilder = new StringBuilder ();
 				
+				int i = 0;
 				foreach (char c in line.text) {
 					stringBuilder.Append (c);
 					lineText.text = stringBuilder.ToString ();
+					if(Input.GetKeyUp(KeyCode.Space) && i >= 10){
+						lineText.text = line.text;
+						break;
+					}
+					i++;
 					yield return new WaitForSeconds (textSpeed);
 				}
 			} else {
