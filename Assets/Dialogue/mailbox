@@ -1,0 +1,12 @@
+[
+	{
+		"title": "mailbox.start",
+		"tags": "",
+		"body": "NO QUEST\nWelcome to the automated mail delivery system. \nSCANNING FOR MAIL...\n....\nYou currently have no letters in your possession.\nThank you for stopping by.\n\nFIRST MAILMAN QUEST\nLetter accepted. Location approved.\nPlease insert stamp...\n....ERROR....\nLetter will be held until further notice. Please contact your local post office.\n\nSECOND MAILMAN QUEST\nLetter accepted. Location approved. \nDETECTED PERISHABLE ITEMS. ONE FULL SIZED SEA BASS.\nYour letter should arrive in 1-2 business days. \nThank you for working with us. Hope you find a better job, probably won't though.\nGoodbye.\n\n",
+		"position": {
+			"x": 539,
+			"y": 261
+		},
+		"colorID": 0
+	}
+]
