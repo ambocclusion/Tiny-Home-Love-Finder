@@ -1608,6 +1608,11 @@ Prefab:
       propertyPath: talkToNode
       value: jock.start
       objectReference: {fileID: 0}
+    - target: {fileID: 114106160207946698, guid: 117d9b8244fb4441488eb0b60d52765a,
+        type: 2}
+      propertyPath: loveSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b8a8ec08c2ed94b53a628eddf60b3e91, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117d9b8244fb4441488eb0b60d52765a, type: 2}
   m_IsPrefabParent: 0

@@ -9,6 +9,7 @@ public class LoveTarget : MonoBehaviour {
 
 	public ParticleSystem LoveParticle;
 	public ParticleSystem HateParticle;
+	public AudioSource audioSource;
 
 	private string _myName = "";
 
@@ -22,7 +23,9 @@ public class LoveTarget : MonoBehaviour {
 
 		_named = GetComponent<Yarn.Unity.Example.NPC>().characterName;
 		_storage.SetValue("$" + _named + "Love", new Yarn.Value((float)Me.PlayerRating));
+		audioSource = GetComponent<AudioSource>();
 		//_storage.SetValue("$" + _named + "TalkedToToday", new Yarn.Value((float)Me.LastTalkedToDay));
+
 
 	}
 
@@ -49,6 +52,8 @@ public class LoveTarget : MonoBehaviour {
 		if(Me.PlayerRating >= LoveManager.Instance.LikabilityToMoveIn){
 			LoveManager.Instance.MoveIn(this);
 		}
+
+		audioSource.Play();
 
 	}
 
